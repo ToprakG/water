@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey of Water</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('world_ocean_day(freepik.com, starline).jpg'); /* Background image */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Center the background */
+            color: #ffffff; /* White text for better contrast */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .explore-button {
+            background-color: #d32f2f; /* Red button */
+            color: #ffffff; /* White button text */
+            border: none;
+            padding: 12px 25px; /* Increased padding */
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Transition for color and transform */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+            margin-top: 240px; /* Move the button 20px lower */
+        }
+
+        .explore-button:hover {
+            background-color: #b71c1c; /* Darker red on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+
+        .explore-button:active {
+            transform: translateY(1px); /* Slight drop effect on click */
+        }
+
+        /* Animation styles for the button */
+        .fade-out {
+            animation: fadeOut 0.5s forwards; /* Fade out animation */
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                transform: scale(1.2); /* Slight scale effect */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="explore-button" onclick="redirectWithAnimation()">Explore</button>
+    </div>
+
+    <script>
+        function redirectWithAnimation() {
+            const button = document.querySelector('.explore-button');
+            button.classList.add('fade-out'); // Add fade-out animation class
+            
+            setTimeout(() => {
+                window.location.href = 'game.html'; // Redirect to another page after the animation
+            }, 500); // Delay matches the animation duration
+        }
+    </script>
+</body>
+</html>
+
